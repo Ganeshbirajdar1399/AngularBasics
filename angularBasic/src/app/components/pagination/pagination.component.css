@@ -1,0 +1,20 @@
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .pagination-controls a {
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    color: #007bff;
+  }
+  
+  .pagination-controls a.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  

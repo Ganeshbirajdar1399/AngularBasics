@@ -1,0 +1,153 @@
+<div class="container-fluid pt-3">
+    <h3 class="text-info text-center">Data Binding</h3>
+    <hr />
+    <div class="text-bg-info">
+      <div class="exp">
+        <h5>Interpolation ( TS file -> HTML )</h5>
+        <hr />
+        <p>
+          Welcome:-<i>{{ username }}</i>
+        </p>
+        <p>
+          Name of player:- <i>{{ playername }}</i>
+        </p>
+        <p>
+          Runs Scored by player:-<i>{{ runs }}</i>
+        </p>
+        <p>
+          Congrates to <i>{{ playername }}</i> for the <i>{{ runs }}</i> runs.
+        </p>
+        <hr />
+      </div>
+    </div>
+    <!-- <div class="text-bg-success">
+        <div class="exp">
+       
+          <h5>Interpolation ( TS file -> HTML )</h5>
+          <hr />
+          <p>Welcome:-<i>{{ username }}</i></p>
+          <p>Name of player:-<i>{{ playername }}</i> </p>
+          <p>Runs Scored by player:-<i>{{ runs }}</i></p>
+          <p>Congrates to<i></i> {{ playername }} for the<i>{{ runs }}</i> runs.</p>
+          <hr />
+        </div>
+      </div> -->
+    <div class="text-bg-warning">
+      <div class="exp">
+        <h5>Expressions</h5>
+        <hr />
+        <h5>Digits Shows after point using:- toFixed()</h5>
+        <p>
+          Avarage= <i>{{ (runs / innings).toFixed(1) }}</i>
+        </p>
+        <hr />
+        <h5>Using Method</h5>
+        <p>
+          Avg:-<i>{{ avg().toFixed(2) }}</i>
+        </p>
+        <hr />
+        <h5>Conditional Statement with ternary operators</h5>
+        <p>
+          Batter Type:- <i>{{ avg() >= 50 ? "Star Batter" : "Normal Batter" }}</i>
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr />
+  
+  <div class="container-fluid">
+    <h3 class="text-primary text-center">Event Binding</h3>
+    <hr />
+    <div class="bg-primary">
+      <div class="exp">
+        <h5 class="text-light">Event Binding ( HTML -> TS file )</h5>
+        <hr />
+        <button class="btn btn-warning pt-3" (click)="increase()">
+          Increse runs by 100
+        </button>
+        <button class="btn btn-warning pt-3 ms-3" (click)="decrease()">
+          Decrese runs by 100
+        </button>
+        <hr />
+        <p class="text-light">
+          Total runs:-<i> {{ runs }}</i>
+        </p>
+        <p class="text-light">
+          Avg:-<i>{{ avg().toFixed(2) }}</i>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <h3 class="text-primary text-center">Property Binding</h3>
+    <hr />
+    <div class="bg-secondary">
+      <div class="exp">
+        <h5 class="text-light">Event Binding (TS file ->HTML)</h5>
+        <hr />
+        <a class="btn btn-warning" [href]="link">Click Here</a>
+        <button
+          [disabled]="disable"
+          class="btn btn-warning ms-2"
+          (click)="changeUrl()"
+        >
+          Change Link
+        </button>
+        <div>
+          <img
+            class="pt-3"
+            [src]="imgLink"
+            alt="image"
+            width="200px"
+            height="200px"
+          />
+          <img
+            *ngIf="fire"
+            class="pt-3 ms-4"
+            src="fire.jpg"
+            alt="image"
+            width="200px"
+            height="200px"
+          />
+          <img
+            *ngIf="lake"
+            class="pt-3 ms-4"
+            src="lake.jpg"
+            alt="image"
+            width="200px"
+            height="200px"
+          />
+          <img
+            *ngIf="tree"
+            class="pt-3 ms-4"
+            src="tree.jpg"
+            alt="image"
+            width="200px"
+            height="200px"
+          />
+          <div class="pt-4">
+            <button class="btn btn-danger" (click)="imgChange(1)">Fire</button>
+            <button class="btn btn-danger ms-2" (click)="imgChange(2)">
+              Lake
+            </button>
+            <button class="btn btn-danger ms-2" (click)="imgChange(3)">
+              Tree
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 class="text-primary text-center">Two Way Binding</h3>
+    <hr />
+    <div>
+      <div class="exp">
+        <p>
+          Name Of Student :-<i>{{ name }}</i>
+        </p>
+        <!-- Class=>html-->
+        <input [(ngModel)]="name" /><!--html=>class-->
+      </div>
+    </div>
+  </div>
+  <hr />
+  

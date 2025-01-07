@@ -1,0 +1,104 @@
+<!-- Template-driven forms:- Rely on directives in the template to create
+  and manipulate the underlying object model.They are useful for adding a
+   simple form to an app, such as an email list signup form. -->
+
+<!-- use two directives(dom manupulation)
+   ngForm ngModel-->
+
+<!-- visited              ng-touched    ng-untouched-->
+<!-- value change         ng-dirty      ng-pristine-->
+<!-- visited              ng-valid      ng-invalid-->
+<div class="container-fluid m-3 w-50 bg-info">
+    <div class="p-4">
+      <h4 class="text-center">Login Form</h4>
+      <form class="mt-3" #myForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            #email="ngModel"
+            [(ngModel)]="formdata.email"
+            placeholder="enter email address"
+            minlength="5"
+            required
+          />
+        </div>
+        <!--Validation-->
+        <div>
+          <small class="text-danger" *ngIf="email.errors?.['required']"
+            >Email is required.</small
+          >
+          <small class="text-success" *ngIf="email.errors?.['minlength']"
+            >Please enter a valid email address.</small
+          >
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            #password="ngModel"
+            [(ngModel)]="formdata.password"
+            placeholder="enter password"
+            minlength="8"
+            required
+          />
+        </div>
+        <!--Validation-->
+        <div>
+          <small class="text-danger" *ngIf="password.errors?.['required']"
+            >Password is required.</small
+          >
+          <small class="text-success" *ngIf="password.errors?.['minlength']"
+            >Please enter a strong password and password should be minimum 8
+            charecter</small>
+        </div>
+  
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="fname"
+            name="fname"
+            #fname="ngModel"
+            [(ngModel)]="formdata.fname"
+            placeholder="enter first name"
+            minlength="8"
+            required
+          />
+        </div>
+        <!--Validation-->
+        <div>
+          <small class="text-danger" *ngIf="fname.untouched"
+            >fname is untouched.</small>
+            <small class="text-danger" *ngIf="fname.touched"
+            >fname is touched.</small>
+            <small class="text-danger" *ngIf="fname.dirty"
+            >fname is dirty.</small>
+            <small class="text-danger" *ngIf="fname.pristine"
+            >fname is pristine.</small>
+      
+        </div>
+  
+        <div class="text-center mt-2">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="myForm.invalid"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+      <div *ngIf="isSubmitted" class="alert alert-success mt-3">
+        Form submited successfully
+      </div>
+    </div>
+  </div>
+  

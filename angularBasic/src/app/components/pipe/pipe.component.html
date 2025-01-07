@@ -1,0 +1,39 @@
+<!-- Pipes are used to transform the value without change original value-->
+<!--1. inbuilt pipe-->
+<!--2.customs pipe-->
+<!--3. third party pipe-->
+<div class="container-fluid pt-3">
+    <h3 class="text-primary text-center">Inbuilt Pipes</h3>
+    <hr />
+    <p>
+      Name Of student is: <i>{{ firstName | uppercase }}</i>
+    </p>
+    <p>
+      Name Of student is: <i>{{ firstName | lowercase }}</i>
+    </p>
+    <p>
+      Total Rupees : <i>{{ 445 | currency : "INR" }}</i>
+    </p>
+    <p>
+      Total Rupees : <i>{{ 5.75765 | number : "3.1-1" }}</i>
+    </p>
+    <p>
+      Date:
+      <i
+        >{{ date | date : "yyyy" }}/{{ date | date : "MM" }}/{{
+          date | date : "dd"
+        }}</i
+      >
+    </p>
+    <p>
+      Date: <i>{{ date }}</i>
+    </p>
+    <hr />
+    <h3 class="text-primary text-center">Custom Pipes</h3>
+    <hr />
+    <h4>Custom Pipes</h4>
+    <p>
+      Square of 6 : <i>{{ 6 | square }}</i>
+    </p>
+  </div>
+  

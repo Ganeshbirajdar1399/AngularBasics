@@ -1,0 +1,17 @@
+.p {
+    color: red;
+    background-color: black;
+}
+
+.style {
+    padding: 5px;
+    margin: 5px 5px;
+}
+
+.das {
+    color: yellow;
+    background-color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+    margin: 5px 5px;
+}

@@ -1,0 +1,8 @@
+<p>dashboard works!</p>
+
+
+<hr>
+
+<input name="userName" [(ngModel)]="userName"  class="form-control m-2 p-2"/>
+<button class="btn btn-primary m-2 p-2" (click)="toggle()">ShowValue</button>
+<app-add [fname]="userName" [showValue]="showValue"></app-add>

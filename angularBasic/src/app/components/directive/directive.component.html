@@ -1,0 +1,139 @@
+<!-- Structural Directives-->
+
+<!-- *ngIf-->
+<!--*ngFor-->
+<!--*ngSwitch-->
+
+<!--  Atrribute Directves-->
+<!-- Attribute Directives is used to change DOM appearence-->
+<!-- *ngClass-->
+<!--*ngStyle-->
+<!--*ngModel-->
+
+<!-- Directives are to use change DOM layout,Attribute and sturucture-->
+<!-- 1.structural directives-->
+
+<div class="container-fluid pt-3">
+    <h3 class="text-primary text-center">Structural Directives</h3>
+    <hr />
+    <div class="bg-primary">
+      <p><b>*ngIf</b></p>
+      <div class="exp">
+        <p>Name of user:- {{ name }}</p>
+        <!-- <div *ngIf="name">user name is :- {{ name }}</div>
+          <div *ngIf="showValue; then one; else two"></div>
+          <ng-template #one>This is template one</ng-template>
+          <ng-template #two>This is template two</ng-template> -->
+        @if(showValue){
+        <p>This is value {{ showValue }}</p>
+        } @else {
+        <p>This is value {{ showValue }}</p>
+        }
+      </div>
+    </div>
+    <hr />
+    <!--rendering multiple thinks-->
+    <div class="bg-warning">
+      <p><b>*ngfor</b></p>
+      <div class="exp">
+        <div *ngFor="let player of players">{{ player }}</div>
+        <hr />
+        @for (player of players; track player) {
+        <p>List Of player: {{ player }}</p>
+        } @for (student of students; track student.Name+student.Role) {
+        <p>Student Name: {{ student.Name }} Role: {{ student.Role }}</p>
+        }
+      </div>
+    </div>
+    <hr />
+    <div class="bg-info">
+      <div class="exp">
+        <p><b>*ngSwitch</b></p>
+  
+        <h5>Using new syntax</h5>
+        @switch (playerName) { @case ('Dhoni') {
+        <p>Dhoni is selected</p>
+        } @case ('Virat') {
+        <p>Virat is selected</p>
+        } @case ('Sachin') {
+        <p>Sachin is selected</p>
+        } @case ('Rohit') {
+        <p>Rohit is selected</p>
+        } @default { Default case. } }
+      </div>
+  
+      <hr />
+      <div class="exp">
+        <h5>Write seperate cases</h5>
+        <div [ngSwitch]="playerName">
+          <p *ngSwitchCase="'Dhoni'">Dhoni is selected</p>
+          <p *ngSwitchCase="'Virat'">Virat is selected</p>
+          <p *ngSwitchCase="'Sachin'">Sachin is selected</p>
+          <p *ngSwitchCase="'Rohit'">Rohit is selected</p>
+          <p *ngSwitchDefault>Player not selected</p>
+        </div>
+      </div>
+      <hr />
+      <div class="exp">
+        <h5>Using loop</h5>
+        <div [ngSwitch]="playerName">
+          <div *ngFor="let play of players">
+            <p *ngSwitchCase="play">{{ playerName }} is selected</p>
+          </div>
+          <p *ngSwitchDefault>Player not selected</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!-- 2.Attribute directives -->
+  
+    <div>
+      <h3 class="text-primary text-center">Attribute Directives</h3>
+      <hr />
+      <p><b>ngClass</b></p>
+      <div>
+        <p [ngClass]="showValue ? myClass : disableClass">
+          This is example of ngclass
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div>
+      <p><b>ngStyle</b></p>
+      <div>
+        <p [ngStyle]="showValue ? myActivestyle : myDisablestyle">
+          This is example of ngclass
+        </p>
+        <!-- <div [ngStyle]="getStyles()">This is a toggle styled div</div>
+               <button (click)="toggleStyles()">Toggle Styles</button> -->
+      </div>
+      <div class="text-center">
+        <button class="btn btn-sm btn-primary" (click)="changeColor()">
+          toggle
+        </button>
+      </div>
+    </div>
+    <hr />
+    <div>
+      <p><b>ngModel</b></p>
+      <div>
+        <p>Player Name is :-{{ playerName }}</p>
+        <input [(ngModel)]="playerName" />
+        <!--(ngModelChange)="logValue()"-->
+  
+        <button class="btn btn-danger ms-4" (click)="showName()">
+          Show Name
+        </button>
+      </div>
+    </div>
+    <hr />
+    <div>
+      <h3 class="text-primary text-center">Custom Directives</h3>
+      <hr />
+      <div appStyledirectve>
+        <p>custom directive</p>
+      </div>
+    </div>
+  </div>
+  <hr />
+  

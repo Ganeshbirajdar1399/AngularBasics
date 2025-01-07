@@ -1,0 +1,69 @@
+<div class="container p-3">
+    <!-- <div class="p-3">
+      <button class="btn btn-primary btn-primary" (click)="getData()">
+        Get Data
+      </button>
+    </div> -->
+    <h4>Posts Data</h4>
+    <!-- <h3>{{currentUser.username}}</h3> -->
+    <div class="d-flex justify-content-between">
+      <div class="mt-2">
+        Display Records:-
+        <select [(ngModel)]="itemsPerPage" styled-select>
+          <option *ngFor="let count of [15, 10, 5]" [value]="count">
+            {{ count }}
+          </option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search..."
+          [(ngModel)]="searchText"
+        />
+      </div>
+    </div>
+    <table class="table table-bordered table-striped w-100">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th (click)="orderSort('name')">
+            Name
+            <span
+              style="color: black; border: 2px solid red"
+              class="fa fa-caret-down pl-1"
+            ></span>
+          </th>
+          <th>Role</th>
+          <th (click)="orderSort('accNo')">
+            AccountNo
+            <span
+              style="color: black; border: 2px solid red"
+              class="fa fa-caret-down pl-1"
+            ></span>
+          </th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <tr
+          *ngFor="
+            let customer of data
+              | paginate : { itemsPerPage: itemsPerPage, currentPage: page }
+              | searchUsers : searchText : 'name' : 'role'
+              | orderPipe : orderColumn : isAsc
+          "
+        >
+          <td>{{ customer.id }}</td>
+          <td>{{ customer.name }}</td>
+          <td>{{ customer.role }}</td>
+          <td>{{ customer.accNo }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pagination">
+      <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </div>
+  </div>
+  

@@ -1,0 +1,27 @@
+<div class="container-fluid pt-3">
+    <h3 class="text-primary text-center">Child Works!</h3>
+    <hr />
+    <p>------- From Parent -------</p>
+    <h6>Parent to child</h6>
+    <p>
+      1. Firstname of student is value coming from parent component:
+      <i>{{ firstName }}</i>
+    </p>
+    <p>
+      2. Array number: <i>{{ arrayNumber }}</i>
+    </p>
+    <p>
+      <b
+        >4. This input receive from parent:
+        <i
+          ><u>{{ fromParent }}</u>
+        </i></b
+      >
+    </p>
+    <hr />
+    <h4>To Parent</h4>
+    <button class="btn btn-primary" (click)="sendDataToParent()">
+      Send To Parent
+    </button>
+  </div>
+  

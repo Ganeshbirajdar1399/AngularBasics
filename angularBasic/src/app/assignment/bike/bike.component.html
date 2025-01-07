@@ -1,0 +1,21 @@
+<div class="row">
+    <h3 class="text-center text-primary pt-4">Motoecycle Products</h3>
+    <hr class="text-primary" />
+    <div class="col-md-6 col-sm-12 col-lg-3" *ngFor="let product of products">
+      <div class="container-fluid pt-2">
+        <div>
+          <div class="card" style="width: 18rem">
+            <img [src]="product.imageUrl" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{ product.name }}</h5>
+              <span>Price: {{ product.price | currency }}</span>
+              <hr />
+              <p class="card-text">{{ product.description }}</p>
+              <a href="#" class="btn btn-primary">Show More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

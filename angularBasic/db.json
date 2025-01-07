@@ -1,0 +1,198 @@
+{
+    "posts": [
+      {
+        "id": "1",
+        "title": "a title",
+        "views": 100
+      },
+      {
+        "id": "2",
+        "title": "another title",
+        "views": 200
+      },
+      {
+        "id": "3",
+        "title": "a title",
+        "views": 100
+      },
+      {
+        "id": "4",
+        "title": "another title",
+        "views": 200
+      },
+      {
+        "id": "5",
+        "title": "a title",
+        "views": 100
+      },
+      {
+        "id": "6",
+        "title": "another title",
+        "views": 200
+      },
+      {
+        "id": "1",
+        "title": "a title",
+        "views": 100
+      },
+      {
+        "id": "2",
+        "title": "another title",
+        "views": 200
+      },
+      {
+        "id": "3",
+        "title": "a title",
+        "views": 100
+      },
+      {
+        "id": "4",
+        "title": "another title",
+        "views": 200
+      },
+      {
+        "id": "5",
+        "title": "a title",
+        "views": 100
+      },
+      {
+        "id": "6",
+        "title": "another title",
+        "views": 200
+      },
+      {
+        "id": "1",
+        "title": "a title",
+        "views": 100
+      },
+      {
+        "id": "2",
+        "title": "another title",
+        "views": 200
+      },
+      {
+        "id": "3",
+        "title": "a title",
+        "views": 100
+      },
+      {
+        "id": "4",
+        "title": "another title",
+        "views": 200
+      },
+      {
+        "id": "5",
+        "title": "a title",
+        "views": 100
+      },
+      {
+        "id": "6",
+        "title": "another title",
+        "views": 200
+      },
+      {
+        "id": "1",
+        "title": "a title",
+        "views": 100
+      },
+      {
+        "id": "2",
+        "title": "another title",
+        "views": 200
+      },
+      {
+        "id": "3",
+        "title": "a title",
+        "views": 100
+      },
+      {
+        "id": "4",
+        "title": "another title",
+        "views": 200
+      },
+      {
+        "id": "5",
+        "title": "a title",
+        "views": 100
+      },
+      {
+        "id": "6",
+        "title": "another title",
+        "views": 200
+      }
+    ],
+    "users": [
+      {
+        "id": "2",
+        "name": "Ram sada",
+        "role": "MERN developer"
+      },
+      {
+        "id": "3",
+        "name": "Subhash",
+        "role": "Trainer developer"
+      },
+      {
+        "id": "2",
+        "name": "Ram sada",
+        "role": "MERN developer"
+      }
+    ],
+  
+    "customers": [
+      {
+        "id": "2",
+        "name": "Ram",
+        "role": "Mean developer",
+        "accNo": 2211
+      },
+      {
+        "id": "3",
+        "name": "Subhash",
+        "role": "Trainer",
+        "accNo": 2444
+      },
+      {
+        "id": "2",
+        "name": "Shyam",
+        "role": "Manager",
+        "accNo": 5555
+      },
+      {
+        "id": "2",
+        "name": "Rajesh",
+        "role": "MERN developer",
+        "accNo": 2344
+      },
+      {
+        "id": "3",
+        "name": "Varun",
+        "role": "Trainer",
+        "accNo": 8888
+      },
+      {
+        "id": "2",
+        "name": "Mangesh",
+        "role": "MERN developer",
+        "accNo": 8362
+      },
+      {
+        "id": "2",
+        "name": "Umesh",
+        "role": "developer",
+        "accNo": 5463
+      },
+      {
+        "id": "3",
+        "name": "Mukesh",
+        "role": "Manager",
+        "accNo": 9323
+      },
+      {
+        "id": "2",
+        "name": "Ram sada",
+        "role": "MERN developer",
+        "accNo": 3342
+      }
+    ]
+  }
