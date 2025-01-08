@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-electronics',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './electronics.component.html',
   styleUrl: './electronics.component.css'
 })

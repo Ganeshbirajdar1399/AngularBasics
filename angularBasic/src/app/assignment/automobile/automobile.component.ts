@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-automobile',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './automobile.component.html',
   styleUrl: './automobile.component.css'
 })
