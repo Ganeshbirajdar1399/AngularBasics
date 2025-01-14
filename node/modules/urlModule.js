@@ -8,6 +8,7 @@ console.log("host:",data.host);
 console.log("hostname:",data.hostname);
 console.log("origin:",data.origin);
 console.log("port:",data.port);
+console.log("href:",data.href);
 console.log("protocol:",data.protocol);
 console.log("Query:",data.searchParams.get('user'));
 console.log("Query:",data.searchParams.has('app'));

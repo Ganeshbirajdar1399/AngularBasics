@@ -217,7 +217,6 @@ const writeStream = fs.createWriteStream("index4.txt","utf-8")
 // benefits of stream memory infficiency improve
 // faster response time
 // better scalibility for large data handling
-
 //we can use pipe for control flow of stream
 
 readStream.pipe(writeStream);
