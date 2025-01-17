@@ -4,13 +4,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddComponent } from './add/add.component';
 
 const routes: Routes = [
-  { path:'',component:DashboardComponent},
-  { path:'dashboard',component:DashboardComponent},
-  { path:'add',component:AddComponent}
+  { path: '', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'add', component: AddComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class CrudRoutingModule { }
+export class CrudRoutingModule {}
