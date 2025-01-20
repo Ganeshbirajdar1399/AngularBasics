@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { LocalStorageService } from '../../services/services/local-storage.service';
 import { AuthService } from '../../services/auth.service';
 import { SessionStorageService } from '../../services/services/session-storage.service';
@@ -9,7 +9,7 @@ import { LoginServiceService } from '../../services/services/login-service.servi
 
 @Component({
   selector: 'app-reactive-form',
-  imports: [ReactiveFormsModule,CommonModule],
+  imports: [ReactiveFormsModule,CommonModule,RouterModule],
   templateUrl: './reactive-form.component.html',
   styleUrl: './reactive-form.component.css'
 })
